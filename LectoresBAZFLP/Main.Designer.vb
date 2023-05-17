@@ -25,6 +25,7 @@ Partial Class Main
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblIPDestino = New System.Windows.Forms.Label()
         Me.txtipdestino = New System.Windows.Forms.TextBox()
         Me.cmdDesconectar = New System.Windows.Forms.Button()
         Me.cmdConectar = New System.Windows.Forms.Button()
@@ -39,9 +40,8 @@ Partial Class Main
         Me.txttotallecturas = New System.Windows.Forms.TextBox()
         Me.ss_status = New System.Windows.Forms.StatusStrip()
         Me.tt_versionapi = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.t_reset = New System.Windows.Forms.Timer(Me.components)
-        Me.lblIPDestino = New System.Windows.Forms.Label()
         Me.tsEstadoConexion = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.t_reset = New System.Windows.Forms.Timer(Me.components)
         Me.groupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.ss_status.SuspendLayout()
@@ -56,6 +56,11 @@ Partial Class Main
         resources.ApplyResources(Me.groupBox1, "groupBox1")
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.TabStop = False
+        '
+        'lblIPDestino
+        '
+        resources.ApplyResources(Me.lblIPDestino, "lblIPDestino")
+        Me.lblIPDestino.Name = "lblIPDestino"
         '
         'txtipdestino
         '
@@ -138,20 +143,15 @@ Partial Class Main
         Me.tt_versionapi.Name = "tt_versionapi"
         resources.ApplyResources(Me.tt_versionapi, "tt_versionapi")
         '
-        't_reset
-        '
-        Me.t_reset.Interval = 300000
-        '
-        'lblIPDestino
-        '
-        resources.ApplyResources(Me.lblIPDestino, "lblIPDestino")
-        Me.lblIPDestino.Name = "lblIPDestino"
-        '
         'tsEstadoConexion
         '
         resources.ApplyResources(Me.tsEstadoConexion, "tsEstadoConexion")
         Me.tsEstadoConexion.Name = "tsEstadoConexion"
         Me.tsEstadoConexion.Spring = True
+        '
+        't_reset
+        '
+        Me.t_reset.Interval = 300000
         '
         'Main
         '

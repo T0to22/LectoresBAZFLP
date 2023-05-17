@@ -51,18 +51,18 @@ Public Class Main
 
             Dim ipDestino As String = Trim(txtipdestino.Text)
 
-            Dim cadenaconex As String = "protocol=TCP,ipaddress=" & ipDestino & ",port=4370,timeout=2000,passwd="
+            Dim cadenaConex As String = "protocol=TCP,ipaddress=" & ipDestino & ",port=4370,timeout=2000,passwd="
 
             Cursor = Cursors.WaitCursor
 
             If IntPtr.Zero = placa1 Then
 
-                placa1 = Conectar(cadenaconex)
-                Cursor = Cursors.[Default]
-
                 If placa1 <> IntPtr.Zero Then
                     t_placa1.Enabled = True 'START AL TIMER TICK
-                    cmdDesconectar.Enabled = True
+
+                    placa1 = Conectar(cadenaConex)
+                Cursor = Cursors.[Default]
+                cmdDesconectar.Enabled = True
                     cmdConectar.Enabled = False
                     tsEstadoConexion.Text = "CONECTADO"
                     tsEstadoConexion.ForeColor = Color.DarkGreen
