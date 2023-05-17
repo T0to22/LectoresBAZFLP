@@ -160,7 +160,7 @@ Partial Class Main
         Me.Controls.Add(Me.ss_status)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.groupBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "Main"
         Me.groupBox1.ResumeLayout(False)
