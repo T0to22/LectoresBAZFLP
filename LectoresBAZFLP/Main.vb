@@ -34,7 +34,7 @@ Public Class Main
         Me.Text = "Lector de Tarjetas"
 
         'LEO Y SETEO VERSION DE LA API
-        tt_versionapi.Text = Application.ProductVersion.ToString
+        tt_versionapi.Text = Application.ProductVersion.Substring(0, 5)
 
         'TEXTO TIMER RESET
         tsEstadoConexion.Text = "DESCONECTADO"
@@ -57,10 +57,9 @@ Public Class Main
 
             If IntPtr.Zero = placa1 Then
 
-                If placa1 <> IntPtr.Zero Then
-                    t_placa1.Enabled = True 'START AL TIMER TICK
+                t_placa1.Enabled = True 'START AL TIMER TICK
 
-                    placa1 = Conectar(cadenaConex)
+                placa1 = Conectar(cadenaConex)
                 Cursor = Cursors.[Default]
                 cmdDesconectar.Enabled = True
                     cmdConectar.Enabled = False
@@ -70,7 +69,7 @@ Public Class Main
                     tsEstadoConexion.Text = "ERROR DE CONEXION"
                     tsEstadoConexion.ForeColor = Color.Red
                     Await BlinkText()
-                End If
+
             End If
 
         End If
