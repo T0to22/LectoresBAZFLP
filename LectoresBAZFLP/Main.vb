@@ -241,7 +241,7 @@ Public Class Main
         Try
 
             'VARIABLES
-            Dim url As String = "https://concesionaria.bazflp.com/api/socket.io/tarjTest.php"
+            Dim url As String = "https://concesionaria.bazflp.com/api/socket.io/tarjProd.php"
             Dim metodo As String = "POST"
             Dim let_fecha As String = CDate(fecha).ToShortDateString
             Dim let_placa As String = CStr(CInt(placa))
